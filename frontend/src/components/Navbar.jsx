@@ -8,13 +8,13 @@ const Navbar = () => {
     <nav className="bg-gray-900 pt-2 pb-4 border-b-4 border-pred">
       <div className="container">
         <div className="logo flex items-center justify-center">
-          <img className="w-10 h-10 lg:h-16 lg:w-16" src={logo} alt="" />
+          <img className="w-10 h-10 md:h-16 md:w-16" src={logo} alt="" />
           <Link to="/">
-            <h1 className=" text-2xl lg:text-4xl mt-2 lg:mt-4 text-white font-bold">
+            <h1 className=" text-2xl md:text-4xl mt-2 md:mt-4 text-white font-bold">
               Rachid Lgym Bro
             </h1>
           </Link>
-          <img className="w-10 h-10 lg:h-16 lg:w-16" src={logo1} alt="" />
+          <img className="w-10 h-10 md:h-16 md:w-16" src={logo1} alt="" />
         </div>
       </div>
     </nav>

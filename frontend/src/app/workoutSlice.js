@@ -9,7 +9,24 @@ export const workoutSlice = createApi({
     getWorkouts: builder.query({
       query: () => " ",
     }),
+    postWorkout: builder.mutation({
+      query: (data) => ({
+        url: " ",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    deleteWorkout: builder.mutation({
+      query: (data) => ({
+        url: `/${data}`,
+        method: "DELETE",
+      }),
+    }),
   }),
 });
 
-export const { useGetWorkoutsQuery } = workoutSlice;
+export const {
+  useGetWorkoutsQuery,
+  usePostWorkoutMutation,
+  useDeleteWorkoutMutation,
+} = workoutSlice;

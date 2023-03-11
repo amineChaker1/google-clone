@@ -1,8 +1,16 @@
-import React, { useState } from "react";
-import { useGetWorkoutsQuery } from "../app/workoutSlice";
-import "./workoutDetails.css";
+import React, { useEffect, useState } from "react";
+import {
+  useDeleteWorkoutMutation,
+  useGetWorkoutsQuery,
+} from "../app/workoutSlice";
+
 const WorkoutDetails = () => {
   const { data } = useGetWorkoutsQuery();
+  const [deleteworkout, res] = useDeleteWorkoutMutation();
+  const query = useGetWorkoutsQuery();
+  useEffect(() => {
+    query.refetch();
+  }, [res.isLoading]);
   return (
     <div>
       {data?.map((workout) => (
@@ -22,7 +30,15 @@ const WorkoutDetails = () => {
             {" "}
             <span className="font-semibold">Reps : </span> {workout.reps}{" "}
           </p>
+
           <p> {workout.createdAt} </p>
+
+          <span
+            className="hover:cursor-pointer"
+            onClick={() => deleteworkout(workout._id)}
+          >
+            delete
+          </span>
         </div>
       ))}
     </div>

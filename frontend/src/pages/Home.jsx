@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import WorkoutDetails from "../components/WorkoutDetails";
+import WorkoutForm from "../components/WorkoutForm";
 
 const Home = () => {
   /* ;
@@ -19,8 +20,13 @@ const Home = () => {
 
   return (
     <div>
-      <div className="workouts  p-5 lg:p-28">
-        <WorkoutDetails />
+      <div className="workouts grid grid-cols-4  p-5 md:pl-3 lg:p-28 lg:pl-10">
+        <div className=" col-span-3 px-12">
+          <WorkoutDetails />
+        </div>
+        <div className=" col-span-1">
+          <WorkoutForm />
+        </div>
       </div>
     </div>
   );
