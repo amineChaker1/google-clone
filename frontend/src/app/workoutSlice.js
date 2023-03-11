@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const workoutSlice = createApi({
   reducerPath: "workout",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000/workouts",
+    baseUrl: "https://rachidgymbro.onrender.com/workouts",
   }),
   endpoints: (builder) => ({
     getWorkouts: builder.query({

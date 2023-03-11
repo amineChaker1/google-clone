@@ -20,11 +20,11 @@ const Home = () => {
 
   return (
     <div>
-      <div className="workouts grid grid-cols-4  p-5 md:pl-3 lg:p-28 lg:pl-10">
-        <div className=" col-span-3 px-12">
+      <div className="workouts flex  flex-col-reverse  md:justify-evenly p-3 md:flex-row   ">
+        <div className=" mt-5 md:w-4/6 md:max-w-6xl ">
           <WorkoutDetails />
         </div>
-        <div className=" col-span-1">
+        <div className="mt-5 ">
           <WorkoutForm />
         </div>
       </div>

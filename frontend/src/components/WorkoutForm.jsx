@@ -25,7 +25,7 @@ const WorkoutForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <h3 className="text-pred mb-2 text-2xl font-bold">Add a New Workout</h3>
-      <label className="text-white "> Excersize Title: </label>
+      <label className="text-white "> Workout Title: </label>
       <input
         className="block my-3 w-full p-1 rounded-sm border-none focus:outline-0"
         type="text"
